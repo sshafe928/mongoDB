@@ -31,3 +31,45 @@ Mongoose
     - mongoose is a library that helps us interact with mongoDB
     - it is an alternative to using the mongoDB API and is used more often for its convenience
     - mongoose has a built in object modeling API that ensures that all posted documents are exactly the same
+    - Require('mongoose')
+    -mongoose.connect('connection string')
+
+dotenv
+    - another library this one loads the .env file that we create
+    - you want to require the dotenv early on in order to give your hidden codes to the entire program
+    - use .config() to initialize them right away
+    - require('dotenv').config()
+
+.env
+    - we are going to move the entire atlas URL into the .env file since it includes our password
+    - you can place anoy other hidden values in here too if you want to list users or passwords seperately
+
+Usinf .env
+    - once initialized you use it the same as ususal, instead of using the string we use process.env.ATLAS_URL
+
+.gitignore
+    - this file tells git which files not to push to github
+    - you can create it by typing touch .gitignore and then type .env into it
+    -there should alwyas be /node_modules and .env in this file
+    
+Schema
+    - schema is built in method using mongoose that we build to male sure every document is exactly the same
+    - to define a schema we need to predefine the name and datatype
+    - this should go into a models folder that we create
+
+Schema code
+    - new mongoose.schema({})
+    - this defines a schema object that declares the structure of the data
+    - mongoose.model(var, schema)
+    - assigns the schema to a variable that we can use in the server  
+
+Why schema
+    - by defining a schema we are essentially filtering our results into a common from
+    - if there is extra information given in the body we wont post it and it gives up data verification from the start
+
+important options:
+    - _id: this is a unique identifier for the document that is automatically created by mongoDB
+    - type: lets you define data types
+    - required: ,arks data as required
+    - trim: removes whitespace at the end
+    - default: if this value is not included in the post is will be added with this default value
