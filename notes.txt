@@ -1,0 +1,33 @@
+MongoDB 101
+    - mongo is a non-relational database there are pros and cons to all the differetn types of databases but the biggest for us id the use of JSONs
+    - instead of tables we have collectins which are big data sets
+    - instead of rows we have documents which are accessed using key value pairs like a normal JSONs
+
+Hosting
+
+    - mongodb can be hosted from a local machine if you want but there is a free alternative named "atlas"
+    -Atlas is created by the same team that created mongoDB
+
+Allowing users
+    -once the database is set uo and running yhen you need ot whitelist users
+    - on the left you will see a tab named Database access, click it and then add a new database users
+    - this si just for you right now, if anyone else accesses this db they will do it using your credentials
+    - please add your name and generate a secure password and press add users
+    - copy the password we need it later
+
+Network access
+    - on the left you will see network access
+    - you can choose to add only your ip address but we are going ot allow access from anywhere and press confirm
+
+creating your first db
+    - on the left click databases and then click on the collections tab if you arent there
+    - then click on create own data named the database Store and the collection products
+
+connecting to the database
+    - once made you can clikc on the button and find the link to your database
+    -please copy the string into your project, use the DB folder to hold it
+
+Mongoose
+    - mongoose is a library that helps us interact with mongoDB
+    - it is an alternative to using the mongoDB API and is used more often for its convenience
+    - mongoose has a built in object modeling API that ensures that all posted documents are exactly the same
