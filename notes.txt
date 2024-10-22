@@ -72,4 +72,16 @@ important options:
     - type: lets you define data types
     - required: ,arks data as required
     - trim: removes whitespace at the end
-    - default: if this value is not included in the post is will be added with this default value
+    - default: if this value is not included in the post is will be added with this default value\
+
+Mongoosw query objects
+    - mongoose has a built in query language that allows you to search a collection more efficiently
+    - mongoose docs queries
+
+Model.find()
+    - find is similar to filter in js and will return all of the ocde that matches the querys
+    - for instance:
+    - Model.find({completed: true})
+    - will return all of the documenta that have completed
+    - by filling find({}) with an empty object we can return all of the documents in the collection, every document is an object they match
+    - we can use this on the getAllTasks function to make it more efficient
